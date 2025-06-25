@@ -16,3 +16,14 @@ class RegisterUserSerializer(serializers.ModelSerializer):
             instance.set_password(password)
             instance.save()
             return instance
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = NewUser
+        # fields = '__all__'
+        fields = ['id', 'name', 'email', 'start_date']
+        # extra_kwargs = {'password': {'write_only': True}}
+
+    
