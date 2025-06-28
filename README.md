@@ -1,6 +1,6 @@
-## JWT-AUTH
+## MINI-TRELLO
 
-This is an API project called JWT-AUTH built with Django.
+This is an API project called MINI-TRELLO built with Django Rest Framework.
 
 ## How to run the Project locally
 
