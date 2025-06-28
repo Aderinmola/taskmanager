@@ -26,14 +26,14 @@ This is an API project called JWT-AUTH built with Django.
 | _POST_   | `/login/`           | _Login a User_      | _Login user_    |
 | _POST_   | `/user/profile/`    | _View User Profile_ | _View Profile_  |
 | _Board_   |
-| _GET_    | `/post/posts/`      | _Get all Post_      | _Get Posts_     |
-| _POST_   | `/post/posts/`      | _Create a Post_     | _Create Post_   |
-| _GET_    | `/post/posts/{id}/` | _Get a Post_        | _Get Post_      |
-| _PUT_    | `/post/posts/{id}/` | _Update a Post_     | _Update Post_   |
-| _DELETE_ | `/post/posts/{id}/` | _Delete a Post_     | _Delete Post_   |
+| _GET_    | `/boards/`      | _Get all Board_      | _Get Boards_     |
+| _POST_   | `/boards/`      | _Create a Board_     | _Create Board_   |
+| _GET_    | `/boards/{id}/` | _Get a Board_        | _Get Board_      |
+| _PUT_    | `/boards/{id}/` | _Update a Board_     | _Update Board_   |
+| _DELETE_ | `/boards/{id}/` | _Delete a Board_     | _Delete Board_   |
 | _Task_   |
-| _GET_    | `/post/posts/`      | _Get all Post_      | _Get Posts_     |
-| _POST_   | `/post/posts/`      | _Create a Post_     | _Create Post_   |
-| _GET_    | `/post/posts/{id}/` | _Get a Post_        | _Get Post_      |
-| _PUT_    | `/post/posts/{id}/` | _Update a Post_     | _Update Post_   |
-| _DELETE_ | `/post/posts/{id}/` | _Delete a Post_     | _Delete Post_   |
+| _GET_    | `/task/`      | _Get all Task_      | _Get Tasks_     |
+| _POST_   | `/task/`      | _Create a Task_     | _Create Task_   |
+| _GET_    | `/task/{id}/` | _Get a Task_        | _Get Task_      |
+| _PUT_    | `/task/{id}/` | _Update a Task_     | _Update Task_   |
+| _DELETE_ | `/task/{id}/` | _Delete a Task_     | _Delete Task_   |
