@@ -5,8 +5,8 @@ This is an API project called JWT-AUTH built with Django.
 ## How to run the Project locally
 
 - Install Python
-- Git clone the project with `https://github.com/Aderinmola/jwt-auth.git`
-- change directory with `cd jwt-auth`
+- Git clone the project with `https://github.com/Aderinmola/mini-trello.git`
+- change directory with `cd mini-trello`
 - Create your virtualenv with `py -m venv venv` and activate it.
 - Install the requirements with `pip install -r requirements.txt`
 - Finally run the API, in another terminal
@@ -15,7 +15,7 @@ This is an API project called JWT-AUTH built with Django.
 
 ### 📬 Deployed Link
 
-`https://jwt-auth-uqcu.onrender.com/swagger/`
+`https://mini-trello-voyp.onrender.com/swagger/`
 
 ## ROUTES TO IMPLEMENTED
 
