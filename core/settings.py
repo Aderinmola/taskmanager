@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "users",
-    "board",
+    "task",
     "drf_yasg",
 ]
 
@@ -80,12 +80,23 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': os.environ.get('DB_NAME'),
+           'USER': os.environ.get('DB_USER'),
+           'PASSWORD': os.environ.get('DB_PASSWORD'),
+           'HOST': os.environ.get('DB_HOST'),
+           'PORT': os.environ.get('DB_PORT'),
+       }
+   }
 
 
 # Password validation
@@ -112,7 +123,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+# TIME_ZONE = "UTC"
+TIME_ZONE = 'Africa/Lagos'
+USE_TZ = True  # This enables timezone-aware datetimes
 
 USE_I18N = True
 
@@ -131,6 +144,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,  # or any number you prefer
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
         'rest_framework.permissions.AllowAny',
